@@ -14,6 +14,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        flavorDimensions "default"
     }
 
     buildTypes {
@@ -29,6 +30,16 @@ android {
     buildFeatures {
         viewBinding true
     }
+    productFlavors {
+        AAAA {
+            applicationId "com.demo.aaa"
+            manifestPlaceholders = [app_name: "aaa"]
+        }
+        BBBB {
+            applicationId "com.demo.bbb"
+            manifestPlaceholders = [app_name: "bbb"]
+        }
+    }
 }
 
 dependencies {
@@ -43,3 +54,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 }
+
+
